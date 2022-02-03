@@ -1,0 +1,40 @@
+customerid,account,phone,date,name
+456,10328,1abc,2021-03-01,
+123,123a45,111111-1111,2021-03-01,vinay
+
+
+customerid:NN
+account:NN,n+
+phone: nnn-nnn-nnnn
+date:2021-03-01
+name:NN
+
+error file
+customerid,columns failed,reason failed
+456,phone|name,1|2
+
+
+1:non integer
+2:null
+
+scenario
+
+webapp/yyyy/mm/dd/customer.csv
+
+Day 1
+customerid,name,address
+1,vinay,123 pitam pura
+
+surrogate_key,customerid,name,address,start_date,end_date
+1,vinay,123 pitam pura,2021-09-01,
+
+Day2
+customerid,name,address
+1,vinay,123 raja garden
+
+surrogate_key,customerid,name,address,eff_date,end_date
+1,vinay,123 pitam pura,2021-09-02,
+
+
+
+

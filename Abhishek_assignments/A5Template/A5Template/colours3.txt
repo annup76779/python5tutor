@@ -1,0 +1,6 @@
+#86cfbe,#48b5a3,#91d290,#cfeccf,#b3e2dd,#b5e1ae
+#86cfbe,#48b5a3,#91d290,#b5e1ae,#cfeccf,#b3e2dd
+#86cfbe,#91d290,#b3e2dd,#cfeccf,#b5e1ae,#48b5a3
+#b3e2dd,#91d290,#b5e1ae,#48b5a3,#86cfbe,#cfeccf
+#91d290,#48b5a3,#86cfbe,#b3e2dd,#cfeccf,#b5e1ae
+#b3e2dd,#cfeccf,#b5e1ae,#48b5a3,#86cfbe,#91d290

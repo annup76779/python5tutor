@@ -1,0 +1,10 @@
+in python we have a datatype called list and one more which is called dictionary.
+
+
+letter = ["A","B","C","D",....,"Z"]
+letter[2]
+
+# what is dictionary?
+
+# it works just like oxford dictionary -> dict.
+# how to write a dictionary in python.

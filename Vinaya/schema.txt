@@ -1,0 +1,5 @@
+Customer,customerid,NN,n+,
+Customer,account,NN,n+,
+Customer,phone,,,nnn-nnn-nnnn
+Customer,date,NN,date,%Y-%m-%d
+Customer,name,NN,c+,

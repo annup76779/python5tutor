@@ -1,0 +1,4 @@
+#fddeee,#ddd4e8,#c1b3d7,#a589c1
+#fbb6d1,#fddeee,#a589c1,#ddd4e8
+#fddeee,#c1b3d7,#ddd4e8,#fbb6d1
+#ddd4e8,#fbb6d1,#c1b3d7,#a589c1

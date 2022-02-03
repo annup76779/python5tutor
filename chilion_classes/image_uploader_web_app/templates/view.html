@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Uploads</title>
+
+    <style>
+        #container {
+            padding: 20px;
+        }
+
+        .row{
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+            display: flex;
+            float: left;
+            
+        }
+
+        .img{
+            max-height: 100%;
+            min-height: 100%;
+            box-shadow: 0px 0px 10px 3px lightgrey;
+            margin-left: 20px;
+        }
+        
+        .main_img{
+            max-height:250px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+
+        {% for img in img_list %}
+        <div class="row">
+            {% for _img in img %}
+
+            <div class="img">
+                <img src='{{url_for("static", filename=_img)}}' alt="image not found" class="main_img">
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

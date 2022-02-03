@@ -1,0 +1,6 @@
+#f0e8cd,#dbd5b9,#c0ba99,#feebc9,#fdcaa2,#fca985
+#fdcaa2,#f0e8cd,#fca985,#c0ba99,#feebc9,#dbd5b9
+#f0e8cd,#fdcaa2,#dbd5b9,#fca985,#feebc9,#c0ba99
+#fca985,#f0e8cd,#dbd5b9,#c0ba99,#fdcaa2,#feebc9
+#fdcaa2,#c0ba99,#fca985,#feebc9,#dbd5b9,#f0e8cd
+#fdcaa2,#f0e8cd,#fca985,#feebc9,#c0ba99,#dbd5b9

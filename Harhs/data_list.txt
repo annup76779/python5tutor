@@ -1,0 +1,4 @@
+3 has name 'Racket' whose price is 6000INR.
+4 has name 'shuttle' whose price is 1200INR.
+5 has name 'Shoes' whose price is 2856INR.
+6 has name 'Pizza Bread' whose price is 70INR.

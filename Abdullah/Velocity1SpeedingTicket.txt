@@ -1,0 +1,5 @@
+In Collision ID#1213A: The Vehicle was going 54.02988km/hr and will be charged: $50.37.
+In Collision ID#2479A: The Vehicle was going 55.86696km/hr and will be charged: $73.34.
+In Collision ID#1244E: The Vehicle was going 70.9632km/hr and will be charged: $262.04.
+In Collision ID#8654Z: The Vehicle was going 137.475km/hr and will be charged: $1093.44.
+In Collision ID#1468D: The Vehicle was going 154.70064km/hr and will be charged: $1308.76.
