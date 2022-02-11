@@ -1,0 +1,80 @@
+Part Number + Revision,Unique ID,Characteristics,Value
+000002B,1,01. Height,4.5
+000002B,1,02. Length,8.75
+000002B,1,03. Thickness,0.12
+000002B,1,04. Tab Height 1,2.045
+000002B,1,05. Tab Height 2,2.445
+000002B,1,06. Tab Width ,0.12
+000002B,1,07. Width,0.48
+000002B,2,01. Height,4.6
+000002B,2,02. Length,9
+000002B,2,03. Thickness,1
+000002B,2,04. Tab Height 1,3
+000002B,2,05. Tab Height 2,3
+000002B,2,06. Tab Width ,2
+000002B,2,07. Width,1
+000002B,3,01. Height,4
+000002B,3,02. Length,7
+000002B,3,03. Thickness,0.05
+000002B,3,04. Tab Height 1,1
+000002B,3,05. Tab Height 2,1
+000002B,3,06. Tab Width ,0.05
+000002B,3,07. Width,0.05
+000002B,4,01. Height,4.51
+000002B,4,02. Length,8.76
+000002B,4,03. Thickness,0.125
+000002B,4,04. Tab Height 1,2.05
+000002B,4,05. Tab Height 2,2.45
+000002B,4,06. Tab Width ,0.13
+000002B,4,07. Width,0.49
+000002B,5,01. Height,4.49
+000002B,5,02. Length,8.74
+000002B,5,03. Thickness,0.115
+000002B,5,04. Tab Height 1,2.04
+000002B,5,05. Tab Height 2,2.44
+000002B,5,06. Tab Width ,0.11
+000002B,5,07. Width,0.47
+012345A,6,01. Length,3.85
+012345A,6,02. Width,1.4
+012345A,6,03. Thickness,5.12
+012345A,6,04. ID,5.12
+012345A,6,03. Thickness,10
+012345A,7,01. Length,4
+012345A,7,02. Width,2
+012345A,7,03. Thickness,6
+012345A,7,04. ID,6
+012345A,8,01. Length,3
+012345A,8,02. Width,1
+012345A,8,03. Thickness,5
+012345A,8,04. ID,5
+012345A,8,05. OD,5
+456321A,9,01. Width,0.33
+456321A,9,02. Height,0.1
+456321A,9,03. Length,1.72
+456321A,9,04. Cutout Dist. 1,0.2
+456321A,9,  05. Cutout Distance 2,1.52
+456321A,9,06. Cutout Depth 1,0.05
+456321A,9,07. Cutout Depth   2,0.12
+449875A,10,01. Width,1.39
+449875A,10,02. Length,2.24
+449875A,10,03. Thickness,0.12a
+449875A,11,01. Width,1.2
+449875A,11,02. Length,2.1
+449875A,11,03. Thickness,0.05
+,,,
+449875A,12,01. Width,10
+449875A,12,02. Length,10
+449875A,12,03. Thickness,10
+077655A,13,01. Length,8.72
+077655A,13,02. Width,1.72
+077655A,13,03. Thickness,0.12
+077655A,14,01. Length,8.73
+077655A,14,02. Width,
+077655A,14,03. Thickness,0.125
+077655A,15,01. Length,9
+077655A,15,02. Width,3
+077655A,15,03. Thickness,1
+077655A,16,01. Length,8.6
+077655A,16,02. Width,1.6
+077655A,16,03. Thickness,0.105
+077655B,15,03. Thickness,1

@@ -1,0 +1,8 @@
+Part Number,Part Rev,Part Description,Measurement Type,Characteristics,Nominal Tolerance,Upper Tolerance,Lower Tolerance
+456321,A,Part 6,MAN: 1,01. Width,0.33,0.34,0.32
+456321,A,Part 6,MAN: 2,02. Height,0.1,0.11,0.09
+456321,A,Part 6,MAN: 3,03. Length,1.72,1.73,1.71
+456321,A,Part 6,MAN: 4,04. Cutout Distance 1,0.2,0.21,0.19
+456321,A,Part 6,MAN: 5,05. Cutout Distance 2,1.52,1.53,1.51
+456321,A,Part 6,MAN: 6,06. Cutout Depth 1,0.05,0.06,0.04
+456321,A,Part 6,MAN: 7,07. Cutout Depth 2,0.12,0.13,0.11

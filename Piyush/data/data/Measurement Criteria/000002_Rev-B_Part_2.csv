@@ -1,0 +1,8 @@
+Part Number,Part Rev,Part Description,Measurement Type,Characteristics,Nominal Tolerance,Upper Tolerance,Lower Tolerance
+2,B,Part 2,MAN: 1,01. Height,4.5,4.51,4.49
+2,B,Part 2,MAN: 2,02. Length,8.75,8.76,8.74
+2,B,Part 2,MAN: 3,03. Thickness,0.12,0.125,0.115
+2,B,Part 2,MAN: 4,04. Tab Height 1,2.045,2.05,2.04
+2,B,Part 2,MAN: 5,05. Tab Height 2,2.445,2.45,2.44
+2,B,Part 2,MAN: 6,06. Tab Width ,0.12,0.13,0.11
+2,B,Part 2,MAN: 7,07. Width,0.48,0.49,0.47

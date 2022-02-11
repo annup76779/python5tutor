@@ -1,0 +1,4 @@
+Part Number,Part Rev,Part Description,Measurement Type,Characteristics,Nominal Tolerance,Upper Tolerance,Lower Tolerance
+100001,A,Part 3,MAN: 1,01. Width,7.06,7.07,7.05
+100001,A,Part 3,MAN: 2,02. Length,8.73,8.74,8.72
+100001,A,Part 3,MAN: 3,03. Thickness,0.12,0.125,0.115

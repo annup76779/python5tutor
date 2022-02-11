@@ -1,0 +1,6 @@
+Part Number,Part Rev,Part Description,Measurement Type,Characteristics,Nominal Tolerance,Upper Tolerance,Lower Tolerance
+900112,A,Part 4,MAN: 1,01. Large OD,0.585,0.59,0.58
+900112,A,Part 4,MAN: 2,02. Small OD,0.485,0.49,0.48
+900112,A,Part 4,MAN: 3,03. Shoulder Height 1,0.02,0.03,0.01
+900112,A,Part 4,MAN: 4,04. Shoulder Height 2,0.42,0.43,0.41
+900112,A,Part 4,MAN: 5,05. Length,0.34,0.35,0.33
