@@ -42,16 +42,41 @@ def get_mark_sheet(sub1, sub2, sub3, sub4, sub5, mark1, mark2, mark3, mark4, mar
         C -> 60<=marks>=74
         D -> 50<=marks>=59
         otherwise F as he failed the exam
+
+        output
+        -
+
+        Subject                 Score
+        ------------------------------
+        English                 89
+        Hindi                   71
+        Maths                   59
+        Science                 72
+        SSt                     91
+        -------------------------------
+        Total                   289
+        Percentage              71%
+        -------------------------------
+
     '''
     MAX = 500
     total = mark1 + mark2 + mark3 + mark4 + mark5
     percentage = (total / MAX)* 100
-
+    print("Subject".ljust(24),"Score")
+    print("-" * 35)
+    print(sub1.title().ljust(24),mark1)
+    print(sub2.title().ljust(24),mark2)
+    print(sub3.title().ljust(24),mark3)
+    print(sub4.title().ljust(24),mark4)
+    print(sub5.title().ljust(24),mark5)
+    print("-" * 35)
+    print("Total".ljust(24),total)
+    print("Percentage".ljust(24),percentage, end="%\n")
 
 
 def main():
-    sub1, sub2, sub3, sub4, sub5, mark1, mark2, mark3, mark4, mark5 = take_marks_subject_input()
+    # sub1, sub2, sub3, sub4, sub5, mark1, mark2, mark3, mark4, mark5 = take_marks_subject_input()
 
-    get_mark_sheet(sub1, sub2, sub3, sub4, sub5, mark1, mark2, mark3, mark4, mark5)
+    get_mark_sheet(*take_marks_subject_input())
 
 main()
