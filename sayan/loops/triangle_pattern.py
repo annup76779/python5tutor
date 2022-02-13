@@ -16,3 +16,15 @@ for row_num in range(1, number_of_rows+1):
         print("*", end=" ")
         
     print() # here used to come to new line
+
+"""
+*
+* *
+* * *
+* * * *
+* * * * * 
+* * * *
+* * *
+* *
+*
+"""
