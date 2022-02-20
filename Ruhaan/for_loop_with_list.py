@@ -31,9 +31,9 @@ def is_prime(num):
 prime_100_lst = []
 
 counter_num = 2
-while len(prime_100_lst) <100000:
+while len(prime_100_lst) <100:
 	if is_prime(counter_num) == True:
-		prime_100_lst.append(counter_num)
+		prime_100_lst.append(counter_num) 
 	counter_num += 1
 
 print(len(prime_100_lst))
