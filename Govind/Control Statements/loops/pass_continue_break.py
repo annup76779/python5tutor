@@ -14,14 +14,14 @@
 
 # NOTE: no limit of student
 
-import warnings
-
 def get_rank():
     rank_holder, max_marks = "", 0
+    number_validity_check_flag = True 
     while True:
-        name = input("Enter the name of the student: ").strip()
-        if name == "": # if there is no name break the loop
-            break
+        if number_validity_check_flag == True: # X
+            name = input("Enter the name of the student: ").strip()
+            if name == "": # if there is no name break the loop
+                break
 
         # name => "anurag"
         # prompt for marks -> enter anurag's marks
@@ -29,9 +29,12 @@ def get_rank():
 
         # checking the upper tolerance of marks
         if mark > 500:
-            warnings.warn(f"Marks must be less than 500, found {mark}")
-            continue
-        
+            print(f"<<<---Marks must be less than 500, found {mark}--->>>")
+            number_validity_check_flag = False
+            continue # stop this iteration and continue to other iteration
+        else:
+            number_validity_check_flag = True
+
         # finding maximum mark upto now
         if mark > max_marks:
             max_marks = mark
