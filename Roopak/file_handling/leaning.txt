@@ -1,0 +1,3 @@
+This is file handling class
+I learned Mode of file
+I am writing into the file
