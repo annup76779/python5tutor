@@ -1,0 +1,10 @@
+English 51
+Hindi 90.5
+Maths 89
+Science 71
+Computer 33
+sst 51
+--------------------------
+
+Total - 385.5
+Percentage - 64.25
