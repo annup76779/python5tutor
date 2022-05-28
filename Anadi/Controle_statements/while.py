@@ -20,10 +20,23 @@
 #         print("*", end= " ")
 #     print()
 
+# stars = 1
+# row = int(input("Enter the number of row: "))
+# row_count = 0
+
+# while row_count < row:
+#     i = 0
+#     while i < row_count:
+#         print(end = "**")
+#         i+=1
+#     print("*")
+#     row_count += 1
 
 
 # print the following pattern
 '''
+
+you have to take the number of row always from the user
               *
             ***
           *****
@@ -32,23 +45,39 @@
     ***********
   *************
 ***************
-*
-***
-*****
-******* 
-*********
-***********
-*************
-***************
-'''
-# stars = 1
-row = int(input("Enter the number of row: "))
-row_count = 0
 
-while row_count < row:
-    i = 0
-    while i < row_count:
-        print(end = "**")
-        i+=1
-    print("*")
-    row_count += 1
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+
+
+$$$$$
+$000$
+$000$
+$000$
+$$$$$
+
+
+    $$$$$
+   $$$$$
+  $$$$$
+ $$$$$
+$$$$$
+
+
+    $$$$$$$$$$$
+   $$$$$   $$$$$
+  $$$$$     $$$$$
+ $$$$$       $$$$$
+$$$$$         $$$$$
+       $$$$$
+       $000$
+       $000$
+       $000$
+       $$$$$
+
+'''
