@@ -1,0 +1,10 @@
+Revision of Python topics covered in Class XI.
+Functions: types of function (built-in functions, functions defined in module, user defined
+functions), creating user defined function, arguments and parameters, default parameters,
+positional parameters, function returning value(s), flow of execution, scope of a variable (global
+scope, local scope)
+Introduction to files, types of files (Text file, Binary file, CSV file), relative and absolute paths
+Text file: opening a text file, text file open modes (r, r+, w, w+, a, a+), closing a text file, opening a
+file using with clause, writing/appending data to a text file using write() and writelines(), reading
+from a text file using read(), readline() and readlines(), seek and tell methods, manipulation of data
+in a text file
