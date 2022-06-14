@@ -1,38 +1,19 @@
-''' take a list as user input'''
+lst = [23,323,23,45,4,32432,24,234]
+min_index = 0
 
-lst = []
-n = int(input("Enter the length of the lsit: "))
-for i in range(n): # 0 - n-1
-    usrIn = input("enter the data: ")
-    try:
-        data = eval(usrIn) # plan A
-    except NameError:
-        data = usrIn # plab B
-
-    lst.append(data) # putting data at the end of the list
 print(lst)
-
-# lst.sort(key = lambda x: len(x) if isinstance(x, str) else) # inplace sorting
-# slst = sorted(lst) # makes a new list with sorted data
-# print(slst)
-print(lst)
-
-
 # bubble sort
-'''
-[4,2,3,1]
-after one pass
-[2, 3, 1, 4]
-[2, 3, 1]
-after 1 pass
-[2, 1, 3][4]
-[2, 1][3,4]
-[1], [2, 3 ,4]
-[1,2,3,4]
-'''
+for i in range(len(lst)):
+    for j in range(i, len(lst)): # selected area of the array is from i to length of list -1
+        if lst[min_index] > lst[j]:
+            min_index= j
+    lst[min_index], lst[i] = lst[i], lst[min_index]
 
-# after each pass the inner comparision of each element in the list will be reduced by one
-# for i in range(len(lst)):
-#     print("Indexes in")
-#     for j in range(0, n - i):
-    
+    print(lst[0: i+1], lst[i+1: ])
+    min_index = i+1
+
+
+
+print(lst)
+
+# range(0, len(lst)) 0 - 7-1

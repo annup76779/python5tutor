@@ -13,6 +13,6 @@ types of files supported by python
 'U'       universal newline mode (deprecated)
 '''
 
-f = open('Armaan/file_handling/test2.txt','x')
+f = open('Armaan/file_handling/test2.txt','x') # this 'x' is used to create a file and open the file in write mode
 
 f.write("Hellow my name is anurag")
