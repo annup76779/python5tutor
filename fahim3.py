@@ -7,3 +7,6 @@ while y in "yY" and y != "":
 	print(s)
 else:
 	print(s)
+
+
+range()

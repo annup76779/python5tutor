@@ -14,8 +14,9 @@ int main(){
     i=0;
     printf("Prices of the products you can buy: ");
     while(p>0){
+        printf("%d ", multi);
         if (p>=multi){
-            printf("%d ", multi);
+            
             i += p/multi;
             p%= multi;
         }
