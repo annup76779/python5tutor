@@ -118,17 +118,15 @@ def main():
 
     # making pandas dataframe
     df = pd.DataFrame(
-        {
-            "Capital Weight"
-        }
+        [[w1[x], w2[x], rp[x], f]]
     )
 
 
 def get_new_capital_weights(g1, g2, h1, h2, rp):
     weight_of_fund_1, weight_of_fund_2 = [], []
     for return_rate in rp:
-        weight_of_fund_1.append(g1 + return_rate * h1)
-        weight_of_fund_2.append(g2 + return_rate * h2)
+        weight_of_fund_1.append(round(g1 + return_rate * h1, 4))
+        weight_of_fund_2.append(round(g2 + return_rate * h2, 4))
 
     return weight_of_fund_1, weight_of_fund_2
 
