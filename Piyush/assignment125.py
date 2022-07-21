@@ -145,6 +145,7 @@ def main():
         columns=["Capital Weight 1", "Capital Weight 2", "Portfolio expected return", "Volatility", "Utility", "Sharp Ratio"]
     )
     print(df.to_string())
+    df.to_excel("StudentIDPortfolioProblem.xls")
     print("Max Utility Value: \n",max(df.iterrows(), key = lambda x: x[1][4])[1], sep="", end="\n\n")
     print("Max Sharp Ratio: \n", max(df.iterrows(), key = lambda x: x[1][5])[1], sep="",end="\n\n")
 
