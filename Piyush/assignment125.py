@@ -1,10 +1,11 @@
 import os
+import sys
 
 try:
     import pandas as pd
 except:
     print("As pandas is not available, installing pandas")
-    os.system("python -m pip install pandas")
+    os.system("python -m pip install pandas xlrd")
 import pandas as pd
 
 def portfolio_expected_rate_of_returns(w1, w2, expected_return1, expected_return2):
@@ -29,7 +30,7 @@ def portfolio_volatilities(w1, w2, standard_deviation_of_fund1, standard_deviati
         vp.append(
             (
                 (weight_of_fund_1 ** 2) * (standard_deviation_of_fund1**2) +
-                (weight_of_fund_1 ** 2) * (standard_deviation_of_fund1**2) +
+                (weight_of_fund_2 ** 2) * (standard_deviation_of_fund2**2) +
                 (2 * weight_of_fund_1 * weight_of_fund_2 * standard_deviation_of_fund1 \
                     * standard_deviation_of_fund2 * correlation_12)
             )**0.5
@@ -63,6 +64,23 @@ def cal_sharp_ratio(expected_rate, portfolio_volatility, risk_free_return):
     return sp
 
 
+def get_new_capital_weights(g1, g2, h1, h2, rp):
+    weight_of_fund_1, weight_of_fund_2 = [], []
+    for return_rate in rp:
+        weight_of_fund_1.append(round(g1 + return_rate * h1, 4))
+        weight_of_fund_2.append(round(g2 + return_rate * h2, 4))
+
+    return weight_of_fund_1, weight_of_fund_2
+
+
+def get_df_gen(df):
+    check = True
+    for x in df.iterrows():
+        if check:
+            continue
+        yield x
+
+
 def main():
     '''main function for the project'''
     choice = input("~~~~DATA ENTER CHOICES~~~~~\n"\
@@ -79,9 +97,14 @@ def main():
         data.append(float(input(" the correlation coefficient: "))) # 4
         data.append(float(input("the risk aversion coefficient: "))) # 5
         data.append(float(input("a risk free rate of return: "))) # 6
-        data.append(data)
-    else:
-        pass
+    elif choice.strip() == "2":
+        # reading excel file entered
+        try:
+            df = pd.read_excel(input("Enter path/filename to excel: "))
+            data = df.values.tolist()[0]
+        except:
+            print("Not a valid path of excel")
+            sys.exit(0)
 
     # making weights where capital weight is 1.0 always
     w1, w2 = [0.0,], [1.0,]
@@ -101,33 +124,28 @@ def main():
     # calculating sharp ratio 
     s_p = cal_sharp_ratio(rp, vp, data[6])
 
-    
-    # finding capital weights
-    ## finding g
-    g1 = data[1] / (data[1] - data[0])
-    g2 = 1 - g1
+    if (input("Do you want to compute capital weights using the Huang and Litzenberger(HL) method: (y/n)").strip()+" ")[0].lower() == "y":
+        # finding capital weights
+        ## finding g
+        g1 = data[1] / (data[1] - data[0])
+        g2 = 1 - g1
 
-    ## finding h
-    h1 = 1 / (data[0] - data[1])
-    h2 = 0 - h1
+        ## finding h
+        h1 = 1 / (data[0] - data[1])
+        h2 = 0 - h1
 
-    w1, w2 = get_new_capital_weights(g1, g2, h1, h2, rp)
+        w1, w2 = get_new_capital_weights(g1, g2, h1, h2, rp)
 
     # now finding new portfolio standard deviation from new wights
     efvp = portfolio_volatilities(w1, w2, data[2], data[3], data[4])
 
     # making pandas dataframe
     df = pd.DataFrame(
-        [[w1[x], w2[x], rp[x], f]]
+        sorted([[w1[x], w2[x], round(rp[x], 4), round(efvp[x], 4), round(e_up[x], 4), round(s_p[x], 4)] for x in range(len(w1))], key = lambda x: x[2]),
+        columns=["Capital Weight 1", "Capital Weight 2", "Portfolio expected return", "Volatility", "Utility", "Sharp Ratio"]
     )
-
-
-def get_new_capital_weights(g1, g2, h1, h2, rp):
-    weight_of_fund_1, weight_of_fund_2 = [], []
-    for return_rate in rp:
-        weight_of_fund_1.append(round(g1 + return_rate * h1, 4))
-        weight_of_fund_2.append(round(g2 + return_rate * h2, 4))
-
-    return weight_of_fund_1, weight_of_fund_2
+    print(df.to_string())
+    print("Max Utility Value: \n",max(df.iterrows(), key = lambda x: x[1][4])[1], sep="", end="\n\n")
+    print("Max Sharp Ratio: \n", max(df.iterrows(), key = lambda x: x[1][5])[1], sep="",end="\n\n")
 
 main()
