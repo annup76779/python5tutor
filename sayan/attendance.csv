@@ -1,7 +1,5 @@
-,date,topic,message,left(total 7)
-0,5/06/2022,Split method of string,teach more split and partition function and also ask for the assignment give.,6.0
-1,12/06/2022,"digit adder ",,4.5
-2,21/06/2022,String implementation,,3.5
-3,03-07-2022,"Split and split ",Have to do the assignment given so far. the single one,2.5
-4,10-07-2022,OOPs,,1.5
-5,17-07-2022,OOPs,,0
+date,topic,message,left(total 7)
+24-07-2022,Linked List,Insetion is done,6
+31-07-2022,Linked List,"Deletion and updatation ",5
+07-08-2022,Linked List,Practice on linked list,3.5
+14-08-2022,stack,,1

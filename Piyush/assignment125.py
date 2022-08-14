@@ -5,7 +5,7 @@ try:
     import pandas as pd
 except:
     print("As pandas is not available, installing pandas")
-    os.system("python -m pip install pandas xlrd")
+    os.system("python -m pip install pandas xlrd openpyxl")
 import pandas as pd
 
 def portfolio_expected_rate_of_returns(w1, w2, expected_return1, expected_return2):
@@ -145,7 +145,7 @@ def main():
         columns=["Capital Weight 1", "Capital Weight 2", "Portfolio expected return", "Volatility", "Utility", "Sharp Ratio"]
     )
     print(df.to_string())
-    df.to_excel("StudentIDPortfolioProblem.xls")
+    df.to_excel("StudentIDPortfolioProblem.xlsx")
     print("Max Utility Value: \n",max(df.iterrows(), key = lambda x: x[1][4])[1], sep="", end="\n\n")
     print("Max Sharp Ratio: \n", max(df.iterrows(), key = lambda x: x[1][5])[1], sep="",end="\n\n")
 

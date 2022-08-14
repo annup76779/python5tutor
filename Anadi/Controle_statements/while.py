@@ -81,3 +81,36 @@ $$$$$         $$$$$
        $$$$$
 
 '''
+
+'''
+you have to take the number of row always from the user
+              *
+            ***
+          *****
+        *******
+      *********
+    ***********
+  *************
+***************
+'''
+
+user_in = int(input("Enter the number of rows: ")) # 7
+row = user_in
+star_counter = 1
+while user_in > 0:
+  print(" "* (((row*2)-1)-star_counter), end="")
+  print("*"*star_counter)
+  star_counter += 2
+  user_in -=1 # terminating opertation
+
+
+# row = 7
+# characters_in_row = (row * 2) - 1
+
+# and if no. of start in 3rd row are 5 
+# then tell me how many dashes must be there in row 3
+# """
+# ------------*
+# ----------***
+# --------*****
+# """
