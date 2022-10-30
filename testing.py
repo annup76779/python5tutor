@@ -1,29 +1,31 @@
-class Queue:
-    def __init__(self):
-        self.list_queue = [] # queue is implemented here
+def digit_counter(number):
+    if number // 10 == 0:
+        return number %10, [[number % 10, 1]]
+    num, lst = digit_counter(number//10)
+    if num == number % 10:
+        lst[-1][1]+=1
+    else:
+        lst.append([number % 10, 1])
+    return number%10, lst
+
+print(*digit_counter(331))
+
+def readBackNumber(number, i):
     
-    def enqueue(self,item):
-        self.list_queue.append(item) # adding new data to the end of the queue
+    for _ in range(i):
+        _, counter_lst = digit_counter(number)
+        number = 0
+        for digit_count in counter_lst:
+            num, count = digit_count
+            if not number:
+                number = count * 10
+                number += num
+            else:
+                number *= 10
+                number += count
+                number *= 10
+                number += num 
+        print("next number (iteration %d): %d"%(_, number))
 
-    def dequeue(self):
-        return self.list_queue.pop(0)
 
-    def size(self):
-        return len(self.list_queue)
-
-lst = ['poo', 'ste', 'sim', 'nic','luo', 'ibr', 'sie', 'zhe']
-m = 3
-print(lst)
-def who_wins(m, players):
-    q = Queue()
-    
-    q.list_queue = players
-
-    while q.size() > 1:
-        for _ in range(m):
-            q.enqueue(q.dequeue())
-        q.dequeue()
-        print(q.list_queue)
-    return q.list_queue
-
-who_wins(m, lst)
+readBackNumber(331, 3)

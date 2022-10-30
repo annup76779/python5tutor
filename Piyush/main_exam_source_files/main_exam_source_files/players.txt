@@ -1,0 +1,7 @@
+This file contains names and heights
+6 feet 1 inches => John Stockton
+6 feet 2 inches => Stephen Curry
+6 feet 6 inches => Michael Jordan
+6 feet 9 inches => Larry Bird
+7 feet 1 inches => Kareem Abdul Jabbar
+7 feet 6 inches => Yao Ming

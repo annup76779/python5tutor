@@ -1,0 +1,32 @@
+This is a text file for your text-only (no code) answers.
+
+# 1.
+TypeError: unsupported operand type(s) for -: 'MyInt' and 'MyInt'
+
+# 2.
+TypeError: 'tuple' object does not support item assignment
+
+# 3. commit message
+
+# 4. "fire station"
+a.
+b.
+c.
+d.
+
+
+# 5. type choices
+a.
+b.
+c.
+d.
+e.
+
+
+6.
+a.
+b.
+c.
+d.
+e.
+f.

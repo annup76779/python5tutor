@@ -1,0 +1,19 @@
+iPhone Pro,600
+Mountain Bike,220
+Guitar,1500+
+iPhone Pro,540
+Samsung Galaxy,500
+Clay Doll,120+
+Samsung Galaxy,700
+iPhone Pro,700
+Clay Doll,335+
+Guitar,3000+
+Mountain Bike,250
+Mountain Bike,300
+Guitar,2500+
+Clay Doll,1200+
+iPhone Pro,800
+Samsung Galaxy,800
+Samsung Galaxy,400
+Mountain Bike,150
+Mountain Bike,90
