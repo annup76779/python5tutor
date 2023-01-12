@@ -27,7 +27,9 @@
 <body>
     <div class="main">
         <div class="logo">
-            <img src="{{url_for('static', filename='logo.JPG')}}" height="120">
+            <a href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='logo.JPG')}}" height="120">
+            </a>
         </div>
         <div class="content">
             <h1 style="color: blue;">{{heading}}</h1>
@@ -36,10 +38,14 @@
                 {{name}}, you have ordered:
                 <ul>
                     {% for order in orders %}
-                        <li>{{order}}</li>
+                        <li>{{order[0]}}, ${{order[1]}}, {{order[-1]}} set(s)</li>
                     {% endfor %}
                 </ul>
-                
+                <p>Total: ${{price}}</p>
+                <p>Your Order is confirmed.<br>
+                    Please pay the above amount when collecting your food.
+                </p>
+
             </div>
         </div>
     </div>
