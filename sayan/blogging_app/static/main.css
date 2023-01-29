@@ -94,6 +94,8 @@
     padding: 8px;
     background-color: rgb(245, 245, 245);
     height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .img-blog-body{
@@ -106,6 +108,7 @@
     padding: 10px;
     padding-left: 20px;
     padding-top: 5px;
+    width: 100%;
 }
 
 .blog-ref em{
@@ -120,3 +123,16 @@
     border-radius: 4px;
 }
 
+.btn-primary{
+    background-color: rgb(56, 56, 255);
+    color: white;
+    text-decoration: none;
+}
+
+.corner-right-bottom{
+    position: relative;
+    height: 20px;
+    width: 100px;
+    top: 70px;
+    right: 0%;
+}
