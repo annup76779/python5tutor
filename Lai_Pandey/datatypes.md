@@ -55,3 +55,20 @@ uncheck = False
 print(check)
 print(uncheck)
 ```
+
+
+#### String Datatypes -> `str`
+```python
+first_name = "Anurag"
+last_name = "Pandey"
+
+print("First Name", first_name)
+print("Last Name", last_name)
+print("Full name", first_name + last_name)
+```
+
+##### type of string
+1. Single Quotes string `'String'`
+2. Double Quotes string `"Double"`
+3. Single Quotes doc string `'''String doc '''`
+4. Double Quotes doc string `"""Double quote doc"""`

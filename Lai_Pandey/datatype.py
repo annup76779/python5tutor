@@ -36,3 +36,15 @@ num1 = 89
 
 print(num1, "Is Even?", num1 % 2 == 0)
 print(num1, "Is Odd?", num1 % 2 == 1)
+
+
+# -----------
+# String Datatypes
+# -----------
+
+first_name = "Anurag"
+last_name = "Pandey"
+
+print("First Name", first_name)
+print("Last Name", last_name)
+print("Full name", first_name + " " + last_name)
