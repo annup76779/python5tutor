@@ -8,3 +8,4 @@
 
 print("Hello", "Lai", "Pandey", sep=" - ", file=open("myfile.txt", "w"), flush=True)
 
+list
