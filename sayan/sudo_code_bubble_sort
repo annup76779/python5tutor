@@ -1,0 +1,12 @@
+FOR i FROM 0 TO LENGTH(KeyFieldArray) - 2
+    FOR j FROM 0 TO LENGTH(KeyFieldArray) - 2 - i
+        IF KeyFieldArray[j].CustomerNumber > KeyFieldArray[j+1].CustomerNumber THEN
+            SWAP KeyFieldArray[j] WITH KeyFieldArray[j+1]
+        END IF
+    END FOR
+END FOR
+
+
+Best Case: O(n)
+Worst Case: O(n^2)
+Average: O(n^2)
