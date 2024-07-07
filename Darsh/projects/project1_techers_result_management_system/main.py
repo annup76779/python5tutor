@@ -1,4 +1,4 @@
-from copy import copy
+from copy import deepcopy
 
 constants = {
     "inputs": {
@@ -65,7 +65,54 @@ def create_subject(subjects_database: dict) -> dict:
     return subjects_database
 
 
-subjects_database = dict()
-for i in range(5):
+def create_result(subject_database: dict, result_database: dict):
+    n = input("How many students do you want to enter: ")
+    while not n.isnumeric():
+        n = input("(Bad value: Expected number but got %s)\nHow many students do you want to enter: " % n)
+
+    n = int(n)
+    # loop for n number of time 
+    for i in range(n):
+        name = input("Enter students (%s) name: " % i)
+        roll = input("Enter %s's roll number: " % name)
+
+        result_database[name] = {
+            "roll_number": roll, 'subject': {deepcopy(subject_database)}
+        }
+
+        # We will take obtained marks of all the subjects
+        for subject_name in result_database.get(name, {}).key('subject', {}).keys():
+            obtained_marks = input("Enter %s's obtained marks of %s: " % (name, subject_name))
+            while not is_valid_marks(obtained_marks):
+                obtained_marks = input("(Bad value: Expected number but got `%s`)\nEnter %s's obtained marks of %s: " % (obtained_marks, name, subject_name))
+
+            # we know that obtained marks is valid, we can directly parse it to float number
+            obtained_marks = float(obtained_marks)
+            subject_database[subject_name]['marks'] = obtained_marks
+
+
+# utitly functions 
+def is_valid_marks(str_marks) -> bool:
+    if str_marks.count(".") > 1: # a floating point number can have single "."
+        return False
+
+    # if there is one or no "."
+    if str_marks.count(".") == 1:
+        str_marks_copy = str_marks.replace(".", "").strip()
+        return str_marks_copy.isnumeric()
+    else:
+        return str_marks.strip().isnumeric()
+
+
+def main():
+    subjects_database = dict()
+    result_database = dict() 
+    # create subject for the teacher
     create_subject(subjects_database)
-print(subjects_database)
+    # create results for the teacher
+    create_result(subject_database, result_database)
+
+
+if __name__ == "__main__":
+    main()
+
