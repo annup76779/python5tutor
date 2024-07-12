@@ -5,7 +5,8 @@ constants = {
         "max_marks": "Enter maximum marks (default: 100): ", 
         "min_marks": "Enter minimum marks (default: 0): ", 
         "subject_type": "Choose subject type: (1: Theory (defuault), 2: Practical): ", 
-        "subject_name": "Enter subject name: "
+        "subject_name": "Enter subject name: ", 
+        "subject_count": "Enter the subject count: "
     },
     "messages": {
         "subject_type": "\"Setting subject type to Theroy.\"",
@@ -88,7 +89,7 @@ def create_result(subject_database: dict, result_database: dict):
 
             # we know that obtained marks is valid, we can directly parse it to float number
             obtained_marks = float(obtained_marks)
-            subject_database[subject_name]['marks'] = obtained_marks
+            result_database[name]['subject'][subject_name]['marks'] = obtained_marks
 
 
 # utitly functions 
@@ -104,13 +105,21 @@ def is_valid_marks(str_marks) -> bool:
         return str_marks.strip().isnumeric()
 
 
+def show_results(subjects_database, result_database):
+    max_length = max(subjects_database.keys(), key=lambda x: len(x))
+    
+
+
 def main():
     subjects_database = dict()
     result_database = dict() 
-    # create subject for the teacher
-    create_subject(subjects_database)
+    subject_count = int(input(constants.get("inputs", {}).get("subject_count")))
+    for _ in range(subject_count):
+        # create subject for the teacher
+        create_subject(subjects_database)
     # create results for the teacher
     create_result(subjects_database, result_database)
+    show_results(subjects_database, result_database)
 
 
 if __name__ == "__main__":

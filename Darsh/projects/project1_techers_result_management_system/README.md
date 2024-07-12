@@ -29,3 +29,12 @@
 3. Student name cannot be more than 30 characters 
 4. All subject max marks will be in 3 digits
 5. Student roll number will not be greater than 16 digits 6
+
+
+Student Name: Anurag
+Roll Number: 01
++------------------------------------------------------------------------------+
+|Sub Name       |    Max Marks   |   Min Marks   |  Type   |    Obtained Marks |
++------------------------------------------------------------------------------+
+Geography & history
+English
