@@ -1,4 +1,4 @@
-from copy import deepcopy
+from copy import deepcopy, copy
 
 constants = {
     "inputs": {
@@ -77,11 +77,11 @@ def create_result(subject_database: dict, result_database: dict):
         roll = input("Enter %s's roll number: " % name)
 
         result_database[name] = {
-            "roll_number": roll, 'subject': {deepcopy(subject_database)}
+            "roll_number": roll, 'subject': deepcopy(subject_database)
         }
 
         # We will take obtained marks of all the subjects
-        for subject_name in result_database.get(name, {}).key('subject', {}).keys():
+        for subject_name in result_database.get(name, {}).get('subject', {}).keys():
             obtained_marks = input("Enter %s's obtained marks of %s: " % (name, subject_name))
             while not is_valid_marks(obtained_marks):
                 obtained_marks = input("(Bad value: Expected number but got `%s`)\nEnter %s's obtained marks of %s: " % (obtained_marks, name, subject_name))
@@ -110,7 +110,7 @@ def main():
     # create subject for the teacher
     create_subject(subjects_database)
     # create results for the teacher
-    create_result(subject_database, result_database)
+    create_result(subjects_database, result_database)
 
 
 if __name__ == "__main__":
