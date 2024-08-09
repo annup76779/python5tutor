@@ -106,8 +106,11 @@ def is_valid_marks(str_marks) -> bool:
 
 
 def show_results(subjects_database, result_database):
-    max_length = max(subjects_database.keys(), key=lambda x: len(x))
-    
+    subject_column_width = max(subjects_database.keys(), key=lambda x: len(x))
+
+    for name, result in result_database.items():
+        print("Name: ", name)
+        print("Roll No.: ", result.get("roll_number"))
 
 
 def main():
