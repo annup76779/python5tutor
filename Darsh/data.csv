@@ -1,4 +1,4 @@
-name, age, designation, education, mastery, alive, married
-anurag, 23, engineer, computer science, full stack developer, True, False
-darsh, 23, engineer, computer science, student, True, False
-vendant, 23, engineer, Information Technology, student, True, False
+Name, Product, Price, Discount, Final Price
+Anrag Pandey, Banana, 10, 2, 8
+Darsh, Apple, 20, 4, 16.2
+Ayushi, Chips, 20, 0, 20,,,,44.2
