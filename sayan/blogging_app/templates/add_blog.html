@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-9">
+                <u><h3>{{form_title}}</h3></u>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-9">
+                <form method="post" action="/upload_blog" enctype="multipart/form-data">
+                    <label class="label" for="title">Title of blog</label>
+                    <input type="text" class="form-control" name="title" id="title">
+
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control" name="image" id="image" accept="image/png, image/jpeg">
+                    <label for="body">Body of blog</label>
+                    <textarea name="body" rows="4" class="form-control" id="body" placeholder="Body of blog"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

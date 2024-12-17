@@ -1,0 +1,15 @@
+CSV with (,)
+Anurag Pandey, IT, Developer, 1200000
+
+
+CSV with (    )
+Anurag    IT    Developer    1200000
+
+
+CSV with (, - "")
+"Anurag", "IT", "Developer", 1200000
+
+
+
+csv with (    - "")
+"Anurag"    "IT"    "Developer"    "1200000"

@@ -1,0 +1,5 @@
+Seafood pancake, 6.5, 7
+Salmon rice, 5.0, 10
+Unagi sushi, 4.5, 10
+Ume soda, 2.5, 10
+Yuzu soda, 1.5, 10

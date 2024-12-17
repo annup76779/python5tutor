@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            padding: 10px;
+            min-height: 770px;
+            font-family: 'Open Sans', sans-serif;
+            background-image: url({{ url_for('static', filename='blue-trianglify.jpg') }});
+            background-size: 100% 100%; 
+            background-repeat: no-repeat;
+        }
+        .content{
+            margin-top: 70px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <a href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='logo.JPG')}}" height="120">
+            </a>
+        </div>
+        <div class="content">
+            <h1 style="color: blue;">{{heading}}</h1>
+            <hr>
+            <div>
+                {{name}}, you have ordered:
+                <ul>
+                    {% for order in orders %}
+                        <li>{{order[0]}}, ${{order[1]}}, {{order[-1]}} set(s)</li>
+                    {% endfor %}
+                </ul>
+                <p>Total: ${{price}}</p>
+                <p>Your Order is confirmed.<br>
+                    Please pay the above amount when collecting your food.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
