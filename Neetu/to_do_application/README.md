@@ -10,6 +10,7 @@ todo_app/
 ├── core/                     # Core application logic
 │   ├── task_manager.py       # Functions for task CRUD operations
 │   ├── storage_handler.py    # Functions for reading/writing data to files
+|   ├── enums.py              # creating fixed data for the application
 │   └── utilities.py          # Helper functions (sorting, filtering, etc.)
 │
 ├── services/                 # Business logic layer
@@ -27,3 +28,10 @@ todo_app/
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 ```
+
+#### data management and saving 
+- task id
+- task title
+- task description
+- status
+- priority

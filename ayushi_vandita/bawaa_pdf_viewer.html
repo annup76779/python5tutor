@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Pdf Viewer</title>
+    <style>
+        .btn-menu{
+            position: relative;
+            left: 110%;
+        }
+        #side-navbar{
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+            padding: 0px;
+            box-shadow: 0px 0px 10px 1px rgba(1,1,1,0.5);
+            border-right: 2px solid lawngreen;
+        }
+        #side-navbar ul{
+            list-style: none;
+            position: relative;
+            left: -6%;
+            color: white;
+        }
+        .list-head{
+            display: block;
+        }
+        .list-head:hover{
+            color: rgb(193, 193, 193)
+        }
+
+        #side-navbar ul li{
+            padding: 2px;
+            cursor: pointer;
+            width: 100%;
+            padding: 5px;
+        }
+        #side-navbar ul li ul{
+            margin-left: 20px;
+            display: none;
+            height: 100%;
+        }
+        #side-navbar ul li ul li{
+            border: none;
+        }
+        #side-navbar ul li ul li:hover{
+            background-color: rgb(140, 0, 255);
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+        }
+
+        @media (width < 800px) {
+            #side-navbar{
+                width: 40%;
+            }
+        }
+
+        @media (width < 500px) {
+            .btn-menu{
+                left: 110%;
+            }
+            #side-navbar{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 cover-div" id="cover-div" style="position: absolute; height: 100%; background-color: rgba(33, 33, 33, 0.332);"></div>
+            <nav class="col-2 bg-dark" id="side-navbar" style="position: absolute; height: 100%;">
+                <button class="btn btn-secondary btn-menu" id="open_close_sidebar_btn" style="padding: 1px; padding-left: 8px; padding-right: 8px; font-size: 25px;">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- the list of content -->
+                <ul>
+                    <li>
+                        <strong class="list-head">Introduction</strong>
+                    </li>
+                    <li>
+                        <strong class="list-head">Main Components</strong>
+                        <ul>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong class="list-head">Main Components</strong>
+                        <ul>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong class="list-head">Main Components</strong>
+                        <ul>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                            <li>Component1</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+            <!-- this div is supportive div  -->
+            <div class="col-2"></div>
+
+            <!-- this div is to be used to put the pdf or any main content -->
+            <div class="col-10"></div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script>
+    document.querySelectorAll(".list-head").forEach(element => {
+        element.addEventListener("click", function(e){
+            var sibling = element.nextElementSibling;
+            var style = window.getComputedStyle(sibling)
+            if (style.display == "none") {
+                sibling.style.display="block";
+            }else{
+                sibling.style.display="none";
+            }
+        }, false);
+    });
+    $("#open_close_sidebar_btn").click(function(){
+        var style = window.getComputedStyle(document.getElementById("side-navbar"));
+        if (style.marginLeft == `-${style.width}`){
+            $("#side-navbar").animate({marginLeft: "0px"}, 200);
+            $("#cover-div").show();
+        }else{
+            $("#side-navbar").animate({marginLeft: `-=${style.width}`}, 200);
+            $("#cover-div").hide();
+        }
+    })
+    $("#cover-div").click(function(){
+        var style = window.getComputedStyle(document.getElementById("side-navbar"));
+        $("#side-navbar").animate({marginLeft: `-=${style.width}`}, 200);
+        $("#cover-div").hide();
+    })
+</script>
+</html>
