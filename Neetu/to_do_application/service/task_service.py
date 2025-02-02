@@ -1,6 +1,7 @@
 from core.utitlity import get_enum_member
 from core.enums import PriorityEnum
 from core.viewModels import TaskVM
+from repository import write_task_in_db
 
 
 # A function to take task a user input
@@ -23,5 +24,5 @@ def read_task() -> TaskVM:
     return TaskVM(title=title, description=description, _priority=priority_selection)
 
 
-def add_to_task_list():
-    pass
+def add_to_task_list(task: TaskVM):
+    write_task_in_db(task)

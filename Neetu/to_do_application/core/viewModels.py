@@ -15,7 +15,6 @@ class TaskVM:
     status: StatusEnum = field(default=StatusEnum.PENDING)
     time: str = field(default=datetime.now().strftime("%H:%M:%S"))
 
-
     def __post_init__(self):
         for field in fields(TaskVM):
             expectedtype = field.type
@@ -26,3 +25,22 @@ class TaskVM:
     @property
     def priority(self):
         return self._priority.name
+
+    def to_json(self):
+        return {
+            "title": self.title,
+            "description": self.description,
+            "priority": self.priority,
+            "status": self.status,
+            "time": self.time,
+        }
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return TaskVM(
+            title=data['title'],
+            description=data['description'],
+            _priority=data['priority'],
+            status=data['status'],
+            time=data['time']
+        )
