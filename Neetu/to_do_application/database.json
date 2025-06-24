@@ -1,0 +1,18 @@
+{
+    "2025-02-02": [
+        {
+            "title": "Showcase the demo of To Do application",
+            "description": " I have show neetu the demo of our todo application",
+            "priority": "LOW",
+            "status": 0,
+            "time": "22:09:01"
+        },
+        {
+            "title": "Teach her how to save into database",
+            "description": " I have teach her how to conver the dataclass into json, and write into the database file safely.",
+            "priority": "MEDIUM",
+            "status": 0,
+            "time": "22:12:16"
+        }
+    ]
+}
