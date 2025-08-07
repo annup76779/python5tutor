@@ -1,8 +1,10 @@
 class GridItem:
     symbol = "·"
-    def __init__(self, new_symbol=None):
+    def __init__(self, new_symbol=None, x=None, y=None):
         if new_symbol is not None:
             self.symbol = new_symbol
+        self.x = x
+        self.x = y
 
     @property
     def can_move(self):
