@@ -15,7 +15,9 @@ class GridItem:
 
 
 class Character(GridItem):
-    pass
+    def __init__(self, new_symbol=None, x=None, y=None, health=0):
+        super().__init__(new_symbol, x, y)
+        self.health = health
 
 
 class Player(Character):
