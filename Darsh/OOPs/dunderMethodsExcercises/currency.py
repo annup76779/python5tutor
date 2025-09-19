@@ -21,8 +21,14 @@ exchange_rates = {  # USD -> currency
     "USD": 1.00
 }
 
-class Money:
+class Money(object):
+    def __new__(cls, value: float, currency: str):
+        if currency not in exchange_rates.keys():
+            raise ValueError("Invalid currency")
+        return super().__new__(cls)
+
     def __init__(self, value: float, currency: str):
+        # __init__ adds attributes to the object
         self.value = value
         self.currency = currency
 
@@ -40,7 +46,14 @@ class Money:
             else:
                 raise TypeError("Both objects must be of type Money | int | float")
 
+
+    def __hash__(self):
+        return hash((self.value, self.currency, self.__class__))
+
     def __str__(self):
+        return f"{self.value} {self.currency}"
+
+    def __repr__(self):
         return f"{self.value} {self.currency}"
 
 
@@ -56,5 +69,3 @@ print(usd)
 print(inr)
 print(inr2)
 print(eur)
-
-print(totalMoneyInUSD)
